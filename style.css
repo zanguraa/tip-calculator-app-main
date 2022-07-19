@@ -1,0 +1,362 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+    background: #C5E4E7;
+}
+
+.logo {
+    margin-top: 50px;
+}
+
+.calculator-container {
+    padding: 32px;
+    display: flex;
+    margin-top: 40px;
+    background: #FFFFFF;
+    box-shadow: 0px 32px 43px rgb(79 166 175 / 20%);
+    border-radius: 25px 25px 0px 0px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.percent-container {
+    text-align: left;
+    
+}
+
+.input-class {
+    display: block;
+    width: 293px;
+    height: 48px;
+    background: #F3F9FA;
+    border-radius: 5px;
+    border: none;
+    background-image: url(./images/icon-dollar.svg);
+    background-repeat: no-repeat;
+    background-position: top 17px left 13px;
+    padding-right: 18px;
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: right;
+    color: #00474B;
+    margin-bottom: 32px;
+}
+
+ .input-class:hover {
+    cursor: pointer;
+    background: #F3F9FA;
+    border: 2px solid #26C2AE;
+    border-radius: 5px;
+}
+
+ /* .input-class::placeholder {
+    cursor: pointer;
+    background: #F3F9FA;
+    border-radius: 5px;
+}   */
+
+.label-bill {
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #5E7A7D;
+}
+
+.tip-container {
+    text-align: left;
+    margin-bottom: 32px;
+}
+
+.tip-headline {
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #5E7A7D;
+    
+}
+
+.tip-container button {
+    width: 146px;
+    height: 48px;
+    background: #00474B;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 16px;
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.calculator-container button:focus {
+    cursor: pointer;
+    background: #26C2AE;
+    color: #00474B;
+}
+
+.calculator-container button:hover {
+    background: #F3F9FA;
+    cursor: pointer;
+    color: #00474B;
+    background: #9FE8DF;
+    border-radius: 5px;
+}
+
+#number-people {
+    display: block;
+    width: 293px;
+    height: 48px;
+    background: #F3F9FA;
+    border-radius: 5px;
+    border: none;
+    background-image: url(./images/icon-person.svg);
+    background-repeat: no-repeat;
+    background-position: top 17px left 13px;
+    padding-right: 18px;
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: right;
+    color: #00474B;
+}
+
+#custom {
+    width: 137px;
+    height: 48px;
+    background: #F3F9FA;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: right;
+    color: #547878;
+    padding-right: 10px;
+}
+
+#custom:hover {
+    background: #F3F9FA;
+    border: 2px solid #26C2AE;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* .input-class::placeholder {
+    color: #00474B;
+} */
+
+.amount-container {
+    background: #00474B;
+    border-radius: 15px;
+    width: 85%;
+    padding: 24px;
+    box-sizing: content-box;
+    text-align: left;
+}
+
+.amount-container h4 {
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.amount-container p {
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 19px;
+    color: #7F9D9F;
+}
+
+.first  {
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 47px;
+    text-align: right;
+    letter-spacing: -0.666667px;
+    color: #26C2AE;
+}
+
+.second  {
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 47px;
+    text-align: right;
+    letter-spacing: -0.666667px;
+    color: #26C2AE;
+}
+
+.first-amount {
+    display: flex;
+    justify-content: space-between;
+}
+
+.second-amount {
+    display: flex;
+    justify-content: space-between;
+}
+
+#reset-button {
+    background: #26C2AE;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    color: #00474B;
+    text-transform: uppercase;
+    width: 100%;
+    margin-top: 32px;
+}
+
+@media  screen  and (min-width: 1440px) {
+
+    body {
+        text-align: center;
+        background: #C5E4E7;
+        padding: 163px 260px 239px 260px;
+    }
+    
+    .calculator-container {
+        padding: 32px;
+        display: flex;
+        margin-top: 40px;
+        background: #FFFFFF;
+        box-shadow: 0px 32px 43px rgb(79 166 175 / 20%);
+        border-radius: 25px;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .tip-container {
+        text-align: left;
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap; 
+    }
+
+    .zero {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        width: 370px;
+    }
+
+    #error {
+        color: red;
+        display: none;
+    }
+
+    .tip-container button {
+        height: 48px;
+        flex-basis: 28%;
+    }
+
+    .percent-container {
+        text-align: left;
+    }
+
+    .first-amount {
+        display: flex;
+        justify-content: space-between;
+        /* margin-bottom: 25px; */
+        align-items: center;
+    }
+
+    .second-amount {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .amount-container h2 {
+        font-family: 'Space Mono';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 71px;
+        text-align: right;
+        letter-spacing: -1px;
+        color: #26C2AE;
+    }
+
+   #custom {
+    width: 96px;
+    height: 48px;
+    flex-basis: 25.7%;
+}
+
+    #input-bill {
+        width: 359px;
+        background: #F3F9FA;
+        background-image: url(./images/icon-dollar.svg);
+        background-repeat: no-repeat;
+        background-position: top 17px left 13px;
+        
+        border-radius: 5px;
+        margin-bottom: 40px;
+        
+    }
+
+    #number-people {
+        width: 359px;
+    }
+
+    .amount-container {
+        background: #00474B;
+        border-radius: 15px;
+        width: 85%;
+        display: flex;
+        height: 315px;
+        padding: 40px;
+        box-sizing: content-box;
+        text-align: left;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #reset-button {
+        background: #0D686D;
+        height: 48px;
+    }
+
+    #reset-button:hover {
+        background: #9FE8DF;
+    }
+
+    #reset-button:focus {
+        background: #26C2AE;
+        
+    }
+
+}

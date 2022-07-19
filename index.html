@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Tip calculator app</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="logo">
+      <img src="./images/logo.svg" alt="">
+    </div>
+
+  <section class="calculator-container">
+    <div class="percent-container">
+     
+    <label class="label-bill" for="bill">Bill</label> 
+      <input class="input-class" id="input-bill" type="number" name="bill" placeholder="145$">
+    
+      <h2 class="tip-headline">Select Tip %</h2> 
+    <div class="tip-container">
+        <button onclick="moneyOfPeople(5)">5%</button> 
+        <button onclick="moneyOfPeople(10)">10%</button>
+        <button onclick="moneyOfPeople(15)">15%</button>
+        <button onclick="moneyOfPeople(25)">25%</button>
+        <button onclick="moneyOfPeople(50)">50%</button>
+        <input  id="custom" type="number" name="custom" placeholder="Custom">
+    </div>
+
+     <div class="zero"> 
+      <label  class="label-bill" for="people">Number of People</label> <p id="error">can't be zero</p>
+      </div>
+      <input class="input-class" id="number-people" type="number" name="people" placeholder="5">
+    </div>
+<div class="amount-container">
+  <div class="first-amount">
+    <div>
+      <h4>Tip Amount</h4> 
+      <p>/ person</p>
+    </div> 
+    <div>
+      <h2 class="first">$4.27</h2>
+    </div>
+  </div>
+    <div class="second-amount">
+      <div class="total-amount">
+        <h4>Total</h4> 
+        <p>/ person</p> 
+      </div>
+      <div class="total-amount">
+        <h2 class="second">$32.79</h2>
+      </div>
+    </div>
+      <button onclick="resetAll();" id="reset-button">Reset</button> 
+</div>
+  </section>
+ <script src="./script.js"></script>
+</body>
+</html>
