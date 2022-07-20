@@ -57,11 +57,19 @@ body {
     border-radius: 5px;
 }
 
- /* .input-class::placeholder {
-    cursor: pointer;
-    background: #F3F9FA;
-    border-radius: 5px;
-}   */
+.zero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 10px;
+}
+
+#error {
+    color: red;
+    display: none;
+}
+
+    
 
 .label-bill {
     font-family: 'Space Mono';
@@ -160,9 +168,6 @@ body {
     cursor: pointer;
 }
 
-/* .input-class::placeholder {
-    color: #00474B;
-} */
 
 .amount-container {
     background: #00474B;
