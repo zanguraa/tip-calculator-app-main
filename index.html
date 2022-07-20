@@ -23,12 +23,12 @@
     
       <h2 class="tip-headline">Select Tip %</h2> 
     <div class="tip-container">
-        <button onclick="moneyOfPeople(this)" value="5">5%</button> 
+        <button onfocus="moneyOfPeople(this)" value="5">5%</button> 
         <button onclick="moneyOfPeople(this)" value="10">10%</button>
         <button onclick="moneyOfPeople(this)" value="15">15%</button>
         <button onclick="moneyOfPeople(this)" value="25">25%</button>
         <button onclick="moneyOfPeople(this)" value="50">50%</button>
-        <input  oninput="customPercent(this)" id="custom" type="number" name="custom" placeholder="Custom">
+        <input  onfocusout="customPercent(this)" id="custom" type="number" name="custom" placeholder="Custom" min="0">
     </div>
 
      <div class="zero"> 
