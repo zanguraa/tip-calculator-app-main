@@ -15,14 +15,15 @@ inputMoney.addEventListener("input", (e)=> {
 numberPeople.value = 0;
 numberPeople.addEventListener("input", (e)=> {
     // console.log(e.target.value);
+    if(numberPeople.value > 0 ) {
     
-    
-
+    } else {
+    }
 });
 
 
 function moneyOfPeople(percent) {
-    if (inputMoney.value && numberPeople.value && percent.value) {
+    if (numberPeople.value > 0 && inputMoney.value > 0) {
     const percentCheck = percent.value / 100;
     const tip = inputMoney.value * percentCheck;
     const totalBill = Number(inputMoney.value) + tip;
@@ -39,10 +40,10 @@ peopleZero();
 
 
     function customPercent(customPer) {
-    if (inputMoney.value && numberPeople.value && customPer.value) {
-   const percentCheck = customPer.value / 100;
-   const tip = inputMoney.value * percentCheck;
-    const totalBill = Number(inputMoney.value) + tip;
+        if (numberPeople.value > 0 && inputMoney.value > 0) {
+            const percentCheck = customPer.value / 100;
+            const tip = inputMoney.value * percentCheck;
+            const totalBill = Number(inputMoney.value) + tip;
 
     
    tipAmount.innerHTML = ("$" + (tip / numberPeople.value).toFixed(2));
