@@ -1,54 +1,85 @@
 
+let errorClass = document.getElementById("error");
+let border = document.getElementById("number-people")
 const inputMoney = document.getElementById("input-bill");
+const numberPeople = document.getElementById("number-people");
+
+
 inputMoney.value = 0;
 inputMoney.addEventListener("input", (e)=> {
-    console.log(e.target.value);
-    peopleZero();
+    // console.log(e.target.value);
+    
+    
 });
 
-const numberPeople = document.getElementById("number-people");
 numberPeople.value = 0;
 numberPeople.addEventListener("input", (e)=> {
-    console.log(e.target.value);
+    // console.log(e.target.value);
+    
+    
+
 });
 
+
 function moneyOfPeople(percent) {
-    let percentCheck = ((100 * percent) / 100);
-    let totalPayment = inputMoney.value / numberPeople.value
-    const forPeople = percentCheck / numberPeople.value;
-    let sum = totalPayment + forPeople;
-    tipAmount.innerHTML = ("$" + forPeople);
-    totalAmount.innerHTML = ("$" + sum);
+    if (inputMoney.value && numberPeople.value && percent.value) {
+    const percentCheck = percent.value / 100;
+    const tip = inputMoney.value * percentCheck;
+    const totalBill = Number(inputMoney.value) + tip;
+    
+    tipAmount.innerHTML = ("$" + (tip / numberPeople.value).toFixed(2));
+    totalAmount.innerHTML = ("$" + (totalBill / numberPeople.value).toFixed(2));
+}
+peopleZero();
 }
 
 
-let errorClass = document.getElementById("error");
-let border = document.getElementById("number-people")
+
+
+
+
+    function customPercent(customPer) {
+    if (inputMoney.value && numberPeople.value && customPer.value) {
+   const percentCheck = customPer.value / 100;
+   const tip = inputMoney.value * percentCheck;
+    const totalBill = Number(inputMoney.value) + tip;
+
+    
+   tipAmount.innerHTML = ("$" + (tip / numberPeople.value).toFixed(2));
+     totalAmount.innerHTML = ("$" + (totalBill / numberPeople.value).toFixed(2));
+    }
+    peopleZero();
+ }
+
+
+
+// red border and text if number of people is equal 0
+
+
+
+
+// const customPercent = document.getElementById("custom");
+// customPercent.value = 0;
+// customPercent.addEventListener("input", (e)=> {
+    
+//     let cusTom = moneyOfPeople((parseFloat(customPercent.value)));
+//     tipAmount.innerHTML = ("$" + forPeople);
+//     totalAmount.innerHTML = ("$" + cusTom);
+    
+// });
 
 let checker = true;
 function peopleZero() {
     if (numberPeople.value == 0) {
     errorClass.style.display = "block";
     border.style.border = "2px solid red";
+    checker = false
     } else {
         errorClass.style.display = "none";
         border.style.border = "none";
     }
     
 }
-
-
-
-const customPercent = document.getElementById("custom");
-customPercent.value = 0;
-customPercent.addEventListener("input", (e)=> {
-    
-    let cusTom = moneyOfPeople((parseFloat(customPercent.value)));
-    tipAmount.innerHTML = ("$" + forPeople);
-    totalAmount.innerHTML = ("$" + cusTom);
-    
-});
-
 
 
 

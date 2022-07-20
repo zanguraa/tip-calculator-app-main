@@ -23,16 +23,16 @@
     
       <h2 class="tip-headline">Select Tip %</h2> 
     <div class="tip-container">
-        <button onclick="moneyOfPeople(5)">5%</button> 
-        <button onclick="moneyOfPeople(10)">10%</button>
-        <button onclick="moneyOfPeople(15)">15%</button>
-        <button onclick="moneyOfPeople(25)">25%</button>
-        <button onclick="moneyOfPeople(50)">50%</button>
-        <input  id="custom" type="number" name="custom" placeholder="Custom">
+        <button onclick="moneyOfPeople(this)" value="5">5%</button> 
+        <button onclick="moneyOfPeople(this)" value="10">10%</button>
+        <button onclick="moneyOfPeople(this)" value="15">15%</button>
+        <button onclick="moneyOfPeople(this)" value="25">25%</button>
+        <button onclick="moneyOfPeople(this)" value="50">50%</button>
+        <input  oninput="customPercent(this)" id="custom" type="number" name="custom" placeholder="Custom">
     </div>
 
      <div class="zero"> 
-      <label  class="label-bill" for="people">Number of People</label> <p id="error">can't be zero</p>
+      <label  class="label-bill" for="number-people">Number of People</label> <p id="error">can't be zero</p>
       </div>
       <input class="input-class" id="number-people" type="number" name="people" placeholder="5">
     </div>
